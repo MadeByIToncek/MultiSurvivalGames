@@ -30,7 +30,16 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.4</version>
+        <version>3.5.2</version> <!-- Make sure to always use the latest version (https://maven.apache.org/plugins/maven-shade-plugin/) -->
+        <configuration>
+          <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>
+          <relocations>
+            <relocation>
+              <pattern>com.github.puregero.multilib</pattern>
+              <shadedPattern>space.itoncek.msg.multilib</shadedPattern> <!-- Replace this -->
+            </relocation>
+          </relocations>
+        </configuration>
         <executions>
           <execution>
             <phase>package</phase>
@@ -48,20 +57,28 @@
       </resource>
     </resources>
   </build>
+  <repositories>
+    <repository>
+      <id>papermc-repo</id>
+      <url>https://repo.papermc.io/repository/maven-public/</url>
+    </repository>
+    <repository>
+      <id>sonatype</id>
+      <url>https://oss.sonatype.org/content/groups/public/</url>
+    </repository>
+    <repository>
+      <id>clojars</id>
+      <url>https://repo.clojars.org</url>
+    </repository>
+  </repositories>
 
-    <repositories>
-        <repository>
-            <id>clojars</id>
-            <url>https://repo.clojars.org/</url>
-        </repository>
-    </repositories>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.github.puregero</groupId>
-            <artifactId>multipaper-api</artifactId>
-            <version>1.20.1-R0.1-SNAPSHOT</version>
-        </dependency>
+  <dependencies>
+    <dependency>
+      <artifactId>paper-api</artifactId>
+      <groupId>io.papermc.paper</groupId>
+      <version>1.20.1-R0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
       <dependency>
         <groupId>org.jetbrains</groupId>
         <artifactId>annotations</artifactId>
@@ -73,5 +90,11 @@
         <artifactId>mysql-connector-java</artifactId>
         <version>8.0.33</version>
       </dependency>
+    <dependency>
+      <groupId>com.github.puregero</groupId>
+      <artifactId>multilib</artifactId>
+      <version>1.1.12</version>
+      <scope>compile</scope>
+    </dependency>
     </dependencies>
 </project>
