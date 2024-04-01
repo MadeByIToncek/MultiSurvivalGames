@@ -1,4 +1,0 @@
-name: MultiSurvivalGames
-version: '${project.version}'
-main: space.itoncek.msg.MultiSurvivalGames
-api-version: '1.20'

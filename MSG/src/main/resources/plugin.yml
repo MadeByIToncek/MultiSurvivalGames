@@ -1,0 +1,4 @@
+name: MSG2
+version: '${project.version}'
+main: space.itoncek.msg2.MSG2
+api-version: '1.20'
