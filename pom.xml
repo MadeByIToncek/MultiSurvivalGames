@@ -12,11 +12,12 @@
   <name>MultiSurvivalGames</name>
 
   <properties>
-    <java.version>17</java.version>
+    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <modules>
     <module>MSG</module>
+    <module>MP-TEST</module>
   </modules>
 </project>

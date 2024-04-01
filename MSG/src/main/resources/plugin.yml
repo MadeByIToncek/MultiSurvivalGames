@@ -1,4 +1,4 @@
-name: MSG2
+name: MultiSurvivalGames
 version: '${project.version}'
-main: space.itoncek.msg2.MSG2
+main: space.itoncek.msg.MultiSurvivalGames
 api-version: '1.20'

@@ -1,0 +1,7 @@
+db:
+  host: localhost
+  port: 3306
+  database: msg
+  user: msg
+  password: msg
+master: mp-node1

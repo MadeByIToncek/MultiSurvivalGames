@@ -1,0 +1,6 @@
+name: MP-TEST
+version: '${project.version}'
+main: space.itoncek.mptest.MP_TEST
+api-version: '1.20'
+commands:
+  tptest:
