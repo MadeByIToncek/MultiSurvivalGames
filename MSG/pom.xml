@@ -70,6 +70,10 @@
       <id>clojars</id>
       <url>https://repo.clojars.org</url>
     </repository>
+    <repository>
+      <id>enginehub-maven</id>
+      <url>https://maven.enginehub.org/repo/</url>
+    </repository>
   </repositories>
 
   <dependencies>
@@ -95,6 +99,13 @@
       <artifactId>multilib</artifactId>
       <version>1.1.12</version>
       <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sk89q.worldedit</groupId>
+      <artifactId>worldedit-bukkit</artifactId>
+      <version>7.2.9</version>
+      <scope>provided</scope>
     </dependency>
     </dependencies>
 </project>

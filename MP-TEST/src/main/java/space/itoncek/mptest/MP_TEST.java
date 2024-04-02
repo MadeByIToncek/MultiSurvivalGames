@@ -8,11 +8,13 @@ import org.json.JSONObject;
 
 public final class MP_TEST extends JavaPlugin {
 
+	public static MP_TEST pl;
 	@Override
 	public void onEnable() {
 		// Plugin startup logic
-
+		pl=this;
 		getCommand("tptest").setExecutor(new TPOtherCommand());
+		getCommand("importw").setExecutor(new ImportWorld());
 
 		System.out.println("MultiLib.isMultiPaper() = " + MultiLib.isMultiPaper());
 		System.out.println("MultiLib.getLocalServerName() = " + MultiLib.getLocalServerName());
